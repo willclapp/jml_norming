@@ -19,7 +19,7 @@ timeline.push(general_instructions);
 
 let instructions = {
     type: 'html-keyboard-response',
-    stimulus: `<div class="spec_ins"><p>In this experiment, you will hear someone say a list of words. Your job is to try to identify a few characteristics about the speaker based on their voice. Try to listen carefully when you hear them talk. After you hear each list of words you'll answer a few multiple choice questions about the speaker's gender, race, and so on.<br><br>In each trial, you'll hear the speaker say 20 words and then you'll answer 6 questions about them. After you answer the questions, there will be a brief pause and then the next voice will play automatically.<br><br>Please press the space bar to begin.</p></div>`,
+    stimulus: `<div class="spec_ins"><p>In this experiment, you will hear someone say a list of words. Your job is to try to identify a few characteristics about the speaker based on their voice. Try to listen carefully when you hear them talk. After you hear each list of words you'll answer a few multiple choice questions about the speaker's gender, race, and region.<br><br>In each trial, you'll hear the speaker say 24 words and then you'll answer 3 questions about them. After you answer the questions, there will be a brief pause and then the next voice will play automatically.<br><br>Please press the space bar to begin.</p></div>`,
     choices: ['space']
 };
 
