@@ -6,7 +6,7 @@ let response_temp = {
     type: 'survey-multi-choice',
     post_trial_gap: 1,
     autocomplete: false,
-    questions: [{prompt: "Which of these categorizes more likely describes the race of the speaker?", name: 'race', options: race_options, required:true}, {prompt: "Which of these categories more likely describes the gender of the speaker?", name: 'gender', options: gender_options, required: true}, {prompt: "Where is this speaker more likely from?", name: 'geography', options: geography_options, required: true}],
+    questions: [{prompt: "Which of these categories more likely describes the race of the speaker?", name: 'race', options: race_options, required:true}, {prompt: "Which of these categories more likely describes the gender of the speaker?", name: 'gender', options: gender_options, required: true}, {prompt: "Where is this speaker more likely from?", name: 'geography', options: geography_options, required: true}],
     data: {}
 }
 
