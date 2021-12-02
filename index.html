@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speaker identification study</title>
+    <title>Word categorization study</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
+    <script src="jspsych-6.2.0/jspsych.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-audio-keyboard-response.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-html-keyboard-response.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-html-button-response.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-survey-multi-choice.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-survey-text.js"></script>
+    <script src="jspsych-6.2.0/plugins/jspsych-survey-html-form.js"></script>
+    <link href="jspsych-6.2.0/css/jspsych.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="socialstuff.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="main-body"></body>
+<script src="socialstuff.js"></script>
+<script src="csv/word_ids.js"></script>
+<script src="make_utils.js"></script>
+<script>
+    let talkers = ["BFA01", "BFC02", "BFC03", "BMA01", "BMC01", "BMC02", "BMC03", "BMC04", "BMC06", "WFC01", "WFC03", "WMC01", "WMC02", "WMC06"];
+    talkers = shuffle(talkers);
+    talkers = talkers.slice(0,8);
+    console.log(talkers);
+</script>
+<script src="make_stims.js"></script>
+<script src="index.js"></script>
+</html>
