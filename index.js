@@ -57,7 +57,7 @@ for (i = 0; i < response_objects.length; i++) {
 
 let social_instructions = {
     type: 'html-keyboard-response',
-    stimulus: '<div class="pre-test-container"><p>Great Job! You finished the Experiment.<br><br>To help us interpret our results, it would be helpful to learn a little more about you. Please answer the following questions if you have time. None of the questions are required.</p><br><br>Press the space bar to continue.</div>',
+    stimulus: '<div class="pre-test-container"><p>Great Job! You finished the Experiment.<br><br>To help us interpret our results, it would be helpful to learn a little more about you. Please answer the following questions if you have time.</p><br><br>Press the space bar to continue.</div>',
     choices: ['space'],
     post_trial_gap: 250
 }
@@ -99,10 +99,10 @@ timeline.push(survey2)
 jsPsych.init({
     timeline: timeline,
     show_progress_bar: true,
-    // on_finish: function(data) {
-    //     proliferate.submit({"trials": data.values()});
-    //   }
-    on_finish: function () {
-        jsPsych.data.displayData('csv');
-    }
+    on_finish: function(data) {
+        proliferate.submit({"trials": data.values()});
+      }
+    // on_finish: function () {
+    //     jsPsych.data.displayData('csv');
+    // }
 });
