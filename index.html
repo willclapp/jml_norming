@@ -23,11 +23,16 @@
 <script src="csv/word_ids.js"></script>
 <script src="make_utils.js"></script>
 <script>
+    // Define some global variables
     let talkers = ["BFA01", "BFC02", "BFC03", "BMA01", "BMC01", "BMC02", "BMC03", "BMC04", "BMC06", "WFC01", "WFC03", "WMC01", "WMC02", "WMC06"];
     talkers = shuffle(talkers);
     talkers = talkers.slice(0,8);
-    console.log(talkers);
+    // For audio check
+    let wrong_phase = 0;
+    let correct_quiet = 0;
+    let pass = false;
 </script>
 <script src="make_stims.js"></script>
+<script src="audiocheck.js"></script>
 <script src="index.js"></script>
 </html>

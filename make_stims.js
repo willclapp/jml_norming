@@ -1,12 +1,12 @@
 var race_options = ["Black", "White", "Can't Tell"];
 var gender_options = ["Female", "Male", "Can't Tell"];
-var geography_options = ["West Coast", "South", "Can't Tell"];
+var geography_options = ["Not The South", "South", "Can't Tell"];
 
 let response_temp = {
     type: 'survey-multi-choice',
     post_trial_gap: 1,
     autocomplete: false,
-    questions: [{prompt: "Which of these categories more likely describes the race of the speaker?", name: 'race', options: race_options, required:true}, {prompt: "Which of these categories more likely describes the gender of the speaker?", name: 'gender', options: gender_options, required: true}, {prompt: "Where is this speaker more likely from?", name: 'geography', options: geography_options, required: true}],
+    questions: [{prompt: "Which of these categories best describes the race of the speaker?", name: 'race', options: race_options, required:true}, {prompt: "Which of these categories best describes the gender of the speaker?", name: 'gender', options: gender_options, required: true}, {prompt: "Where is this speaker probably from?", name: 'geography', options: geography_options, required: true}],
     data: {}
 }
 
@@ -41,4 +41,3 @@ generateBlankTrials(audio_objects, audio_temp, audio_data, response_objects, res
 
 generateTrials(audio_objects, response_objects);
 
-console.log(response_objects);

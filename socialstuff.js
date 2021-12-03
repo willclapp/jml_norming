@@ -17,19 +17,19 @@ var html_input = function (QObj) {
             '</label></div>';
     } else if (QObj.type == 'time') {
         var ret = '<div class="form-year-label">' +
-            '<input type="text" class="input-year-textbox" name="' + QObj.name + '"placeholder="" />' +
+            '<input type="text" required class="input-year-textbox" name="' + QObj.name + '"placeholder="" />' +
             '</div>';
     } else if (QObj.type == 'text-entry') {
         var ret = '<div class="form-year-label">' +
-            '<input type="text" class="input-year-textbox" rows="2" cols="50" name="' + QObj.name + '"placeholder="" />' +
+            '<input type="text" required class="input-year-textbox" rows="2" cols="50" name="' + QObj.name + '"placeholder="" />' +
             '</div>';
     } else if (QObj.type == 'radio') {
         var ret = '<div class="form-radio-label"><label for="' + QObj.id + '">' +
-            '<input type="radio" name="' + QObj.name + '" id="' + QObj.id + '" value="' + QObj.id + '" />' +
+            '<input type="radio" required name="' + QObj.name + '" id="' + QObj.id + '" value="' + QObj.id + '" />' +
             '<span>' + QObj.label + '</span>' +
             '</label></div>'
     } else if (QObj.type == 'resp-other') {
-        var ret = QObj.label + '<input class="resp-other" type="text" name="' + QObj.name + '" />'
+        var ret = QObj.label + '<input class="resp-other" required type="text" name="' + QObj.name + '" />'
     } else if (QObj.type === 'select') {
         var ret = '<div class="form-select"><label for="' + QObj.name + '">' + QObj.label + '</label>' +
             '<select name="' + QObj.name + '">';
@@ -42,7 +42,7 @@ var html_input = function (QObj) {
         var ret = '<option value="' + QObj.name + '">' + QObj.label + '</option>'
     } else if (QObj.type === 'textbox') {
         var ret = '<div class="form-textbox-label">' +
-            '<input type="text" name="' + QObj.name +
+            '<input type="text" required name="' + QObj.name +
             '" pattern="' + QObj.pattern +
             '" placeholder="' + QObj.placeholder +
             '" /></div>';
@@ -50,7 +50,7 @@ var html_input = function (QObj) {
         var ret = html_input({ type: 'radio', name: QObj.name, id: QObj.name + '-yes', label: 'Yes' });
         ret += html_input({ type: 'radio', name: QObj.name, id: QObj.name + '-no', label: 'No' });
     } else {
-        return '<input type="checkbox" class="input-checkbox-option" name="' + name + '" /> ';
+        return '<input type="checkbox" required class="input-checkbox-option" name="' + name + '" /> ';
     }
     return ret
 };
@@ -71,7 +71,7 @@ var audio_options = [
     html_input({ type: 'radio', name: 'audio', id: 'other', label: 'Other'}),
 ]
 
-var audio = make_question("How did you listen to the audio during this task?", audio_options.join(''))
+var listen = make_question("How did you listen to the audio during this task?", audio_options.join(''))
 
 var gender_options = [
     html_input({ type: 'radio', name: 'gender', id: 'female', label: 'Female'}),
