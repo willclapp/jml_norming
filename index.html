@@ -24,13 +24,17 @@
 <script src="make_utils.js"></script>
 <script>
     // Define some global variables
-    let talkers = ["BFA01", "BFC02", "BFC03", "BMA01", "BMC01", "BMC02", "BMC03", "BMC04", "BMC06", "WFC01", "WFC03", "WMC01", "WMC02", "WMC06"];
+    let talkers1 = ["BFC02", "BFC03", "BMA01", "BMC01", "BMC02", "BMC03", "BMC04", "WFC01", "WFC03", "WMC01", "WMC02", "WMC06"];
+    let talkers = ["BFA02", "BMA02", "BMC06", "BMC07", "BMC08", "BMC09", "BMC10", "WFA01", "WFA02", "WMA01", "WMA02", "WMC03", "WMC04", "WMC05", "WMC07", "WMC08", "WMC09"];
+    talkers1 = shuffle(talkers1);
     talkers = shuffle(talkers);
-    talkers = talkers.slice(0,8);
-    // For audio check
-    let wrong_phase = 0;
-    let correct_quiet = 0;
-    let pass = false;
+    talkers1 = talkers1.slice(0,2);
+    talkers = talkers.slice(0,6);
+    talkers.push(talkers1[0]);
+    talkers.push(talkers1[1]);
+    talkers = shuffle(talkers);
+    console.log(talkers);
+
 </script>
 <script src="make_stims.js"></script>
 <script src="audiocheck.js"></script>
